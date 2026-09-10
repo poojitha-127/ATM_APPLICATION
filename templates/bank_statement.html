@@ -1,0 +1,47 @@
+{% extends "welcome.html" %}
+
+{% block title %}bank statement {% endblock %}
+
+{% block content %}
+<center>
+    <h2> Bank statement </h2>
+
+    {% if data %}
+
+    <h3>username name: <font color="maroon"> {{username}}</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Ac/no:<font color="maroon"> {{ac_no}}</font></h3>
+    <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="white">
+<tr bgcolor="silver">
+    <th>sl no</th>
+    <th> Transaction type</th>
+    <th>Date & Time</th>
+    <th>Amount</th>
+    <th>Before Balance</th>
+    <th>After Balance</th>
+</tr>
+
+{% for i in data %}
+
+<tr bgcolor="white"><td>{{loop.index}}</td><td>{{i[2]}}</td><td>{{i[3]}}</td><td>{{i[4]}}</td><td>{{i[5]}}</td>
+    <td>{{i[6]}}</td>
+</tr>
+
+
+{% endfor %}
+
+<tr bgcolor="gray" align="center"> <td colspan="4"> Total</td> <td>{{sum_b_balance}}</td><td>{{sum_a_balance}}</td></tr>
+
+
+    </table>
+
+    {% else %}
+    <h2> <font color="red"> no transaction history </font></h2>
+    {% endif %}
+<form action="/home"><input type="submit" value="cancel"></form>
+
+</center>
+
+
+
+
+
+{% endblock %}

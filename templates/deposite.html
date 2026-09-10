@@ -1,0 +1,21 @@
+{% extends "welcome.html" %}
+
+{% block title %}pin  no {% endblock %}
+
+{% block content %}
+
+<center>
+
+     <font color="orange"> <h1>plz enter your deposite amount </h1></font>
+     
+     <form action="/desposite" method="post">
+    
+        
+        <input type="number" name="d_amount" required > <br><br>
+        <input type="submit" value="deposite">
+     </form>
+     <form action="/home"> <input type="submit" value="cancel"></form>
+     
+</center>
+
+{% endblock %}

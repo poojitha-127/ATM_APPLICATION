@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ATM Welcome{% endblock %}</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(to right, #f7e9a0, #fceabb);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Center container */
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ATM Card */
+        .atm-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            border: 2px solid #ddd;
+        }
+
+        .atm-card h1 {
+            color: #ff8800;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .atm-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #ff8800;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .atm-btn:hover {
+            background: #e67600;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            .atm-card {
+                padding: 25px;
+            }
+
+            .atm-card h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    {% block content %}
+    <div class="atm-card">
+        <h1>Welcome to ATM</h1>
+        <form action="/ac_details">
+            <input type="submit" value="Proceed" class="atm-btn">
+        </form>
+    </div>
+    {% endblock %}
+</div>
+
+<footer>
+    <p>© 2026 ATM Banking System | Secure Transactions</p>
+</footer>
+
+</body>
+</html>

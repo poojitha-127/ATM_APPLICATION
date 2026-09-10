@@ -1,0 +1,22 @@
+{% extends "welcome.html" %}
+
+{% block title %}pin  no {% endblock %}
+
+{% block content %}
+
+<center>
+
+     <font color="orange"> <h1>plz enter your  correct pin </h1></font>
+     
+     <form action="/update_pin2"   method="post">
+    
+        <input type="hidden" name="u_pin" value="u_pin">
+   <label for="ch_pin1">enter new pin</label>        <input type="password" name="ch_pin1" required  minlength="4"> <br><br>
+   <label for="ch_pin2">re-enter new pin</label>  <input type="password" name="ch_pin2" required  minlength="4"> <br><br>
+        <input type="submit" value="submit">
+     </form>
+     <FONT color="red">{{info}}</FONT><br><br>
+     <form action="/home"> <input type="submit" value="cancel"></form>
+</center>
+
+{% endblock %}

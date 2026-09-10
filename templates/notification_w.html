@@ -1,0 +1,24 @@
+{% extends "welcome.html" %}
+
+{% block title %}notification on deposite {% endblock %}
+
+{% block content %}
+
+<center>
+
+    
+     <h1> HELLO <font color="navy">{{username}}</font></h1> <br>
+     <h1> <font color="purple">Amount of Rs.<font color="pale green">{{w_amount }}</font>   withdrawn sucessfully <br> plz collect your cash </font></h1> <br>
+
+     
+      <h1> <font color="orange">your current  balance is </font> <font color="green">{{balance}}</font></h1><br><br>
+    
+      <form action="/home" >
+    
+
+        <input type="submit" value="end">
+     </form>
+     
+</center>
+
+{% endblock %}

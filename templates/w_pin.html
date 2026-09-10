@@ -1,0 +1,21 @@
+{% extends "welcome.html" %}
+
+{% block title %}pin  no {% endblock %}
+
+{% block content %}
+
+<center>
+
+     <font color="orange"> <h1>plz enter your  correct pin </h1></font>
+     
+     <form action="/withdraw"   method="post">
+    
+        
+        <input type="password" name="w_pin" required  minlength="4"> <br><br>
+        <input type="submit" value="submit">
+     </form>
+     <FONT color="red">{{info}}</FONT><br><br>
+     <form action="/home"> <input type="submit" value="cancel"></form>
+</center>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "welcome.html" %}
+
+{% block title %}balance {% endblock %}
+
+{% block content %}
+
+<center>
+
+    
+     <h1> HELLO <font color="navy">{{username}}</font></h1> <br>
+      <h1> <font color="orange">your total balance is </font> <font color="green">{{balance}}</font></h1><br><br>
+    
+      <form action="/home" >
+    
+
+        <input type="submit" value="end">
+     </form>
+     <FONT color="red">{{info}}</FONT>
+</center>
+
+{% endblock %}

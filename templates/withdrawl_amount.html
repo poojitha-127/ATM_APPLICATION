@@ -1,0 +1,22 @@
+{% extends "welcome.html" %}
+
+{% block title %}pin  no {% endblock %}
+
+{% block content %}
+
+<center>
+
+     <font color="orange"> <h1>plz enter your withdrawl amount </h1></font>
+     
+     <form action="/withdraw_amount" method="post">
+    
+        <input type="hidden" name="w_form" value="w_form">
+        <input type="number" name="w_amount" required > <br><br>
+        <input type="submit" value="withdraw">
+     </form>
+     <FONT color="red">{{info}}</FONT><br><br>
+     <form action="/home"> <input type="submit" value="cancel"></form>
+     
+</center>
+
+{% endblock %}
